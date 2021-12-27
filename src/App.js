@@ -3,26 +3,27 @@ import { useEffect, useState } from 'react';
 import {getPeople} from './servicios/people'
 
 function App() {
-  const [peoples, setPeoples] = useState([])
+  const [data, setData] = useState([])
+  const [url, setUrl] = useState('https://swapi.dev/api/people/')
   useEffect(() =>{
     async function axiosProduct(url){
       const data = await getPeople(url);
-      setPeoples(data.data.results);
+      setData(data.data);
       console.log(data)
     }
-    axiosProduct('https://swapi.dev/api/people/');
-  },[])
+    axiosProduct(url);
+  },[url])
 
-  function hanlderClickPrevius(){
-    alert('previus')
+  function hanlderClickPrevious(){
+    setUrl(data.previous)
   }
   function hanlderClickNext(){
-    alert('Next')
+    setUrl(data.next)
   }
 
   return (
     <div className="App">
-      {peoples?.map(people => (
+      {data?.results?.map(people => (
         <div key={people.name} className='characters'>
           <h1>{people.name}</h1>
           <p>{people.gender}</p>
@@ -31,7 +32,8 @@ function App() {
           <p>{people.mass} Kilos</p>
         </div>
       ) )}
-      <button onClick={hanlderClickPrevius}>Previus</button><button onClick={hanlderClickNext}>Next</button>
+      {data.previous ? (<button type="button" onClick={hanlderClickPrevious}>Previus</button>) : (<button type="button" disabled>Previus</button>)}
+      {data.next ? (<button type="button" onClick={hanlderClickNext}>Next</button>) : (<button type="button" disabled>Next</button>)}
     </div>
   );
 }
