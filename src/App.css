@@ -3,7 +3,7 @@
 }
 
 .Title-color{
-  color: red;
+  color: #e83434;
 }
 
 .characters{
@@ -12,6 +12,7 @@
   margin: 0 auto;
   margin-bottom: 10px;
   border-radius: 10px;
+  background: azure;
 }
 
 .App-logo {
