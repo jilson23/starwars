@@ -32,8 +32,8 @@ function App() {
           <p>{people.mass} Kilos</p>
         </div>
       ) )}
-      {data.previous ? (<button type="button" onClick={hanlderClickPrevious}>Previus</button>) : (<button type="button" disabled>Previus</button>)}
-      {data.next ? (<button type="button" onClick={hanlderClickNext}>Next</button>) : (<button type="button" disabled>Next</button>)}
+      {data.previous ? <button type="button" onClick={hanlderClickPrevious}>Previus</button> : <button type="button" disabled>Previus</button>}
+      {data.next ? <button type="button" onClick={hanlderClickNext}>Next</button> : <button type="button" disabled>Next</button>}
     </div>
   );
 }
