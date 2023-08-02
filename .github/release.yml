@@ -7,6 +7,10 @@ changelog:
     authors:
       - octocat
   categories:
+    - title: Fixing problems 🐛
+      labels:
+        - bug
+        - hotfix
     - title: Breaking Changes 🛠
       labels:
         - Semver-Major
