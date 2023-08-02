@@ -25,7 +25,7 @@ function App() {
     <div className="App">
       {data?.results?.map(people => (
         <div key={people.name} className='characters'>
-          <h1>{people.name}</h1>
+          <h1 className='Title-color'>{people.name}</h1>
           <p>{people.gender}</p>
           <p>{people.birth_year}</p>
           <p>{people.height} Cm</p>
