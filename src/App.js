@@ -30,6 +30,7 @@ function App() {
           <p>{people.birth_year}</p>
           <p>{people.height} Cm</p>
           <p>{people.mass} K</p>
+          _______
         </div>
       ) )}
       {data.previous ? <button type="button" onClick={hanlderClickPrevious}>Previus</button> : <button type="button" disabled>Previus</button>}
