@@ -28,8 +28,8 @@ function App() {
           <h1>{people.name}</h1>
           <p>{people.gender}</p>
           <p>{people.birth_year}</p>
-          <p>{people.height} Cms</p>
-          <p>{people.mass} Kilos</p>
+          <p>{people.height} Cm</p>
+          <p>{people.mass} K</p>
         </div>
       ) )}
       {data.previous ? <button type="button" onClick={hanlderClickPrevious}>Previus</button> : <button type="button" disabled>Previus</button>}
